@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MOKARI | Chocolates Artesanales</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ffd6e7,#f7fff5,#d7f5d4);
+color:#444;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(10px);
+box-shadow:0 2px 10px rgba(0,0,0,.15);
+z-index:1000;
+}
+
+.logo{
+font-size:35px;
+font-weight:bold;
+color:#d63384;
+text-decoration:none;
+}
+
+.logo span{
+color:#5cb85c;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+font-weight:bold;
+color:#444;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#d63384;
+}
+
+.hero{
+
+margin-top:90px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px;
+gap:50px;
+}
+
+.hero-text{
+width:50%;
+}
+
+.hero-text h1{
+
+font-size:60px;
+color:#d63384;
+margin-bottom:20px;
+
+}
+
+.hero-text h2{
+
+font-size:28px;
+color:#5cb85c;
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+
+}
+
+.boton{
+
+background:#d63384;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
+
+}
+
+.boton:hover{
+
+background:#5cb85c;
+
+}
+
+.hero img{
+
+width:500px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+section{
+
+padding:80px 10%;
+
+}
+
+.titulo{
+
+text-align:center;
+font-size:40px;
+color:#d63384;
+margin-bottom:40px;
+
+}
+
+.contenedor{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+
+}
+
+.tarjeta{
+
+background:white;
+width:300px;
+padding:25px;
+border-radius:20px;
+box-shadow:0 8px 15px rgba(0,0,0,.15);
+transition:.4s;
+
+}
+
+.tarjeta:hover{
+
+transform:translateY(-10px);
+
+}
+
+.tarjeta img{
+
+width:100%;
+border-radius:15px;
+
+}
+
+.tarjeta h3{
+
+margin:15px 0;
+color:#d63384;
+
+}
+
+.tarjeta p{
+
+line-height:1.6;
+
+}
+
+.tarjeta button{
+
+margin-top:15px;
+padding:10px 20px;
+background:#5cb85c;
+border:none;
+color:white;
+border-radius:20px;
+cursor:pointer;
+
+}
+
+.tarjeta button:hover{
+
+background:#d63384;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+margin-top:30px;
+
+}
+
+table th{
+
+background:#d63384;
+color:white;
+padding:15px;
+
+}
+
+table td{
+
+padding:15px;
+border:1px solid #ddd;
+text-align:center;
+
+}
+
+.galeria{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.galeria img{
+
+width:100%;
+border-radius:20px;
+transition:.3s;
+
+}
+
+.galeria img:hover{
+
+transform:scale(1.05);
+
+}
+
+form{
+
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+input,textarea{
+
+width:100%;
+padding:15px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
+
+}
+
+textarea{
+
+resize:none;
+
+}
+
+input[type=submit]{
+
+background:#d63384;
+color:white;
+font-weight:bold;
+cursor:pointer;
+border:none;
+
+}
+
+input[type=submit]:hover{
+
+background:#5cb85c;
+
+}
+
+footer{
+
+background:#333;
+color:white;
+text-align:center;
+padding:40px;
+
+}
+
+footer a{
+
+color:#ffb3d1;
+text-decoration:none;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-text{
+
+width:100%;
+
+}
+
+.hero img{
+
+width:90%;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<a href="#" class="logo">MO<span>KARI</span></a>
+
+<nav>
+
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#nosotros">Nosotros</a></li>
+
+<li><a href="#productos">Productos</a></li>
+
+<li><a href="#galeria">Galería</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-text">
+
+<h1>MOKARI</h1>
+
+<h2>El sabor que convierte momentos en recuerdos.</h2>
+
+<p>
+
+En MOKARI elaboramos chocolates artesanales de la más alta calidad,
+fusionando tradición, innovación y pasión por el cacao.
+Cada pieza está diseñada para ofrecer una experiencia única,
+con ingredientes cuidadosamente seleccionados y un proceso que garantiza
+excelencia en cada bocado.
+
+</p>
+
+<a href="#productos" class="boton">Conoce nuestros productos</a>
+
+</div>
+
+<div>
+
+<img src="imagenes/chocolate.jpg">
+</div>
+
+</section>
+
+<!-- ===========================
+NOSOTROS
+=========================== -->
+
+<section id="nosotros">
+
+<h2 class="titulo">Nuestra Historia</h2>
+
+<p style="text-align:center;font-size:18px;line-height:1.8;max-width:1000px;margin:auto;">
+
+MOKARI nació con el sueño de transformar el chocolate en una experiencia
+inolvidable. Desde nuestros inicios hemos trabajado con cacao cuidadosamente
+seleccionado y procesos artesanales que garantizan calidad, sabor y elegancia.
+
+Nuestra pasión es crear productos que acompañen los mejores momentos de las
+personas, ofreciendo chocolates elaborados con ingredientes naturales,
+presentaciones exclusivas y un compromiso constante con la excelencia.
+
+</p>
+
+</section>
+
+<!-- ===========================
+MISION VISION VALORES
+=========================== -->
+
+<section>
+
+<h2 class="titulo">¿Quiénes Somos?</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<h3>Misión</h3>
+
+<p>
+
+Elaborar chocolates artesanales premium utilizando materias primas
+de alta calidad para brindar felicidad, confianza y experiencias
+inolvidables a nuestros clientes.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>Visión</h3>
+
+<p>
+
+Convertirnos en una empresa líder en la industria chocolatera,
+reconocida por la innovación, el sabor y el compromiso con
+la satisfacción de nuestros consumidores.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>Valores</h3>
+
+<ul>
+
+<li> Calidad</li>
+
+<li> Honestidad</li>
+
+<li> Innovación</li>
+
+<li> Responsabilidad</li>
+
+<li> Trabajo en equipo</li>
+
+<li> Compromiso</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PRODUCTOS
+=========================== -->
+
+<section id="productos">
+
+<h2 class="titulo">Nuestros Chocolates</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<img src="imagenes/chocolate1.jpg">
+
+<h3>Chocolate Oscuro</h3>
+
+<p>
+
+Chocolate elaborado con 70% cacao premium.
+
+Ideal para quienes disfrutan sabores intensos.
+
+</p>
+
+<button>$85 MXN</button>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="imagenes/chocolate2.jpg">
+
+<h3>Chocolate con Leche</h3>
+
+<p>
+
+Una mezcla perfecta entre cacao y leche fresca
+para un sabor suave y cremoso.
+
+</p>
+
+<button>$75 MXN</button>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="imagenes/chocolate4.jpg">
+
+<h3>Chocolate Blanco</h3>
+
+<p>
+
+Preparado con manteca de cacao y vainilla natural.
+
+</p>
+
+<button>$70 MXN</button>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="imagenes/chocolate5.jpg">
+
+<h3>Caja Premium</h3>
+
+<p>
+
+Selección especial de chocolates ideales para regalo.
+
+</p>
+
+<button>$250 MXN</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TABLA NUTRIMENTAL
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Información Nutrimental</h2>
+
+<table>
+
+<tr>
+
+<th>Nutriente</th>
+
+<th>Por 100 g</th>
+
+</tr>
+
+<tr>
+
+<td>Energía</td>
+
+<td>540 kcal</td>
+
+</tr>
+
+<tr>
+
+<td>Proteínas</td>
+
+<td>7 g</td>
+
+</tr>
+
+<tr>
+
+<td>Grasas Totales</td>
+
+<td>35 g</td>
+
+</tr>
+
+<tr>
+
+<td>Grasas Saturadas</td>
+
+<td>20 g</td>
+
+</tr>
+
+<tr>
+
+<td>Carbohidratos</td>
+
+<td>49 g</td>
+
+</tr>
+
+<tr>
+
+<td>Azúcares</td>
+
+<td>41 g</td>
+
+</tr>
+
+<tr>
+
+<td>Sodio</td>
+
+<td>30 mg</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<!-- ===========================
+PROCESO
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Proceso de Elaboración</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<h3>1. Selección</h3>
+
+<p>
+
+Elegimos cuidadosamente los mejores granos de cacao para asegurar un sabor excepcional.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>2. Tostado</h3>
+
+<p>
+
+Los granos son tostados para desarrollar su aroma y resaltar todas sus notas de sabor.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>3. Molido</h3>
+
+<p>
+
+El cacao se transforma en una pasta fina que servirá como base para nuestros chocolates.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>4. Mezcla</h3>
+
+<p>
+
+Incorporamos ingredientes de alta calidad para lograr una textura suave y equilibrada.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>5. Moldeado</h3>
+
+<p>
+
+El chocolate es colocado en moldes con diseños elegantes y originales.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>6. Empaque</h3>
+
+<p>
+
+Cada producto se empaca cuidadosamente para conservar su frescura y presentación.
+
+</p>
+
+</div>
+
+<!-- ===========================
+GALERÍA
+=========================== -->
+
+<section id="galeria">
+
+<h2 class="titulo">Galería MOKARI</h2>
+
+<div class="galeria">
+
+<img src="imagenes/chocolate.jpg" alt="Chocolate 1">
+<img src="imagenes/chocolate1.jpg" alt="Chocolate 2">
+<img src="imagenes/chocolate2.jpg" alt="Chocolate 4">
+<img src="imagenes/chocolate4.jpg" alt="Chocolate 5">
+<img src="imagenes/chocolate5.jpg" alt="Chocolate 6">
+<img src="imagenes/chocolate6.jpg" alt="Chocolate 7">
+
+
+
+</div>
+
+</section>
+
+<!-- ===========================
+NUESTRO EQUIPO
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Nuestro Equipo</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<img src="imagenes/julian1.jpg">
+
+<h3>Chef Chocolatero</h3>
+
+<p>
+
+Especialista en la creación de recetas artesanales con cacao premium.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="imagenes/jiapsy.jpg">
+
+<h3>Control de Calidad</h3>
+
+<p>
+
+Garantiza que cada producto cumpla con nuestros estándares.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<img src="imagenes/lui.jpg">
+
+<h3>Diseño y Empaque</h3>
+
+<p>
+
+Creamos presentaciones elegantes para cada colección.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+TESTIMONIOS
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Opiniones de Nuestros Clientes</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"Los chocolates tienen un sabor increíble y una presentación hermosa."
+
+</p>
+
+<b>- Marlene </b>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"Perfectos para regalar. Sin duda volveré a comprar."
+
+</p>
+
+<b>- 	Juan </b>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>⭐⭐⭐⭐⭐</h3>
+
+<p>
+
+"La calidad es excelente y cada chocolate sabe delicioso."
+
+</p>
+
+<b>- Mayra </b>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PROMOCIONES
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Promociones Especiales</h2>
+
+<div class="contenedor">
+
+<div class="tarjeta">
+
+<h3>Caja Premium</h3>
+
+<p>
+
+Compra una caja de 24 piezas y recibe un 15% de descuento.
+
+</p>
+
+</div>
+
+<div class="tarjeta">
+
+<h3>Chocolate del Mes</h3>
+
+<p>
+
+Durante este mes disfruta de un 20% de descuento en chocolate oscuro.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PREGUNTAS FRECUENTES
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Preguntas Frecuentes</h2>
+
+<div class="tarjeta">
+
+<h3>¿Los chocolates son artesanales?</h3>
+
+<p>Sí, todos nuestros productos son elaborados de forma artesanal con ingredientes seleccionados.</p>
+
+<hr><br>
+
+<h3>¿Realizan envíos?</h3>
+
+<p>Sí, realizamos envíos a diferentes ciudades de México.</p>
+
+<hr><br>
+
+<h3>¿Aceptan pedidos personalizados?</h3>
+
+<p>Sí, elaboramos chocolates para eventos, empresas y regalos especiales.</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+CONTACTO
+=========================== -->
+
+<section id="contacto">
+
+<h2 class="titulo">Contáctanos</h2>
+
+<form>
+
+<label>Nombre Completo</label>
+
+<input type="text" placeholder="Escribe tu nombre">
+
+<label>Correo Electrónico</label>
+
+<input type="email" placeholder="ejemplo@correo.com">
+
+<label>Teléfono</label>
+
+<input type="tel" placeholder="8991234567">
+
+<label>Asunto</label>
+
+<input type="text" placeholder="Motivo del mensaje">
+
+<label>Mensaje</label>
+
+<textarea rows="7" placeholder="Escribe tu mensaje..."></textarea>
+
+<input type="submit" value="Enviar Mensaje">
+
+</form>
+
+</section>
+
+<!-- ===========================
+UBICACIÓN
+=========================== -->
+
+<section>
+
+<h2 class="titulo">Nuestra Ubicación</h2>
+
+<div class="tarjeta" style="width:100%;text-align:center;">
+
+<p>
+
+📍 Dirección: Calle Ut #123, Rio Bravo, Tamaulipas.
+
+</p>
+
+<br>
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<h2>MOKARI</h2>
+
+<br>
+
+<p>
+
+Chocolate artesanal elaborado con pasión, tradición e innovación.
+
+</p>
+
+<br>
+
+<p>
+
+📍 Rio Bravo, Tamaulipas
+
+</p>
+
+<p>
+
+📞 (899) 123-4567
+
+</p>
+
+<p>
+
+✉ contacto @mokari.com
+
+</p>
+
+<br>
+
+<p>
+
+Síguenos en nuestras redes sociales
+
+</p>
+
+<br>
+
+<a href="#">Facebook</a> |
+<a href="#">Instagram</a> |
+<a href="#">TikTok</a>
+
+<br><br>
+
+<hr>
+
+<br>
+
+<p>
+
+© 2026 MOKARI Chocolates. Todos los derechos reservados.
+
+</p>
+
+</footer>
+
+</body>
+</html>
